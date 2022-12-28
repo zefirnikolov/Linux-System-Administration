@@ -17,8 +17,12 @@ Ctrl + l   - clearing the screen
 History   - showing all the previous commands
 cat /etc/group   - showing all the groups in the system
 sudo useradd -m -c "Project Developer" developer   - creating a username with a home folder (-m) with full name (-c) and the username name (in this case "developer")
+
+
 sudo passwd developer      - creating/changing the password of the username in this case developer
+
 sudo usermod -aG wheel developer    - appending the user developer to the wheel group and giving it sudo (administrative) rights (fedora/red hat family specific. For other distributions the sudo group might be different)
+
 sudo mkdir -p /shared/projects/projectXYZ/Stage{1..3}/{DOCUMENTS,BUDGET}   -  creating multiple folders with specific path – if the folder doesn’t exist it will be created (-p) command
 sudo touch /shared/projects/projectXYZ/Stage{1..3}/DOCUMENTS/document{1..5}.doc    - creating multiple files with specific number at specific PATH
 sudo touch /shared/projects/projectXYZ/Stage{1..3}/BUDGET/readme_{en,bg,de}.txt
@@ -31,6 +35,7 @@ Entering
 Some
 Text
 END
+____________________________________________________________
 Networking, programs installation, firewall, edit grub2 (the boot file)
 
 Hostnamectl   -
@@ -50,6 +55,7 @@ sudo vi /etc/default/grub  -Edit grub file(how the system to boot)
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
 df -h
 _____________________________________
+
 sudo vi stars.sh  -Making the file stars.sh using the VIM editor. watch a youtube video how to use VIM.  IF you don't know how to exit the editor: type ESC + ESC, then type ":q"
 #!/bin/bash
 
@@ -66,6 +72,7 @@ exit 0
 
 sudo chmod +x stars.sh   - changing the permissions the executable
 ./stars.sh   - staring the script
+_________________________________________________
 Hard disks:
 
 lsblk -f
