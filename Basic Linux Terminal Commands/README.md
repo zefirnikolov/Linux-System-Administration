@@ -2,7 +2,7 @@
 # Video wih basic linux terminal command I perform in a virual machine
 
 
-Virtual box machine ñ 1 CPU, 1024MB RAM, 16GB hard drive + 2GB another hard drive, 2 network adapters(lan cards) ñ 1 connection, 1 for networking. System Distribution ñ AlmaLinux 8.6 (Red Hat, Fedora family)
+Virtual box machine ‚Äì 1 CPU, 1024MB RAM, 16GB hard drive + 2GB another hard drive, 2 network adapters(lan cards) ‚Äì 1 connection, 1 for networking. System Distribution ‚Äì AlmaLinux 8.6 (Red Hat, Fedora family)
 In Linux almost all is plain txt files and directories in which they are stored
 __________________________________________________
 Users, Dirs, files:
@@ -17,14 +17,14 @@ Ctrl + l   - clearing the screen
 History   - showing all the previous commands
 cat /etc/group   - showing all the groups in the system
 sudo useradd -m -c "Project Developer" developer   - creating a username with a home folder (-m) with full name (-c) and the username name (in this case "developer")
-sudo passwd developer   - creating/changing the password of the username in this case developer
-sudo usermod -aG wheel developer   - appending the user developer to the wheel group and giving it sudo (administrative) rights (fedora/red hat family specific. For other distributions the sudo group might be different)
-sudo mkdir -p /shared/projects/projectXYZ/Stage{1..3}/{DOCUMENTS,BUDGET}   -  creating multiple folders with specific path ñ if the folder doesnít exist it will be created (-p) command
+sudo passwd developer      - creating/changing the password of the username in this case developer
+sudo usermod -aG wheel developer    - appending the user developer to the wheel group and giving it sudo (administrative) rights (fedora/red hat family specific. For other distributions the sudo group might be different)
+sudo mkdir -p /shared/projects/projectXYZ/Stage{1..3}/{DOCUMENTS,BUDGET}   -  creating multiple folders with specific path ‚Äì if the folder doesn‚Äôt exist it will be created (-p) command
 sudo touch /shared/projects/projectXYZ/Stage{1..3}/DOCUMENTS/document{1..5}.doc    - creating multiple files with specific number at specific PATH
 sudo touch /shared/projects/projectXYZ/Stage{1..3}/BUDGET/readme_{en,bg,de}.txt
 cd (PATH)   - moving through folders
 cp /etc/services .    - copy the services file in the current folder
-grep -E '^[#]' services (angled brackets right) services_comments.txt   - find all the lines which start with ì#î in the services file and write them in a newly created file services_comments.txt
+grep -E '^[#]' services (angled brackets right) services_comments.txt   - find all the lines which start with ‚Äú#‚Äù in the services file and write them in a newly created file services_comments.txt
 pstree -p 1 (angled brackets right) processes-tree.txt  
 cat (angled brackets right) doc1.txt (double angled brackets left) END   - dynamically add text in a file(in this case doc1.txt) until END is typed
 Entering
@@ -77,7 +77,7 @@ n
 p
 w  -creating logical volume (type 8e00) with 1500Mib disk space
 
-sudo pvcreate /dev/sdb1  -creating physical volume ñ sdb1
+sudo pvcreate /dev/sdb1  -creating physical volume ‚Äì sdb1
 sudo pvscan
 sudo vgcreate vg1 /dev/sdb1  -creating volume group sdb1
 sudo vgscan
